@@ -1,35 +1,31 @@
-<md-toolbar class="md-accent">
-<h2 class="md-toolbar-tools">
-	<span>Tools</span>
-</h2>
+<md-toolbar class="md-small md-hue-1 tools-menu">
+<div class="md-toolbar-tools">	
+	<md-button class="md-icon-button" aria-label="Settings">
+	<i class="fa fa-file"></i>
+</md-button>
+<md-button class="md-icon-button md-accent" aria-label="Favorite">
+<i class="fa fa-save"></i>
+</md-button>
+<md-button class="md-icon-button" aria-label="More">
+<i class="fa fa-file"></i>
+</md-button>
+<span flex></span>
+<md-button class="md-raised md-primary"><i class="fa fa-download"> </i> CSS</md-button>
+<md-button class="md-raised md-primary"><i class="fa fa-cloud-upload"> </i> Make CDN</md-button>
+</div>
 </md-toolbar>
 
 
 <div flex layout-gt-sm="row" layout="column">
-	<div layout="column" flex>
-		<div flex layout-padding>
-			<div class="line-nums"><span>1</span></div>			
-			<textarea id="demo"></textarea>
+	<div class="code-panel" layout="column" flex="50">
+		<div flex layout="row" style="overflow-y: auto">
+			<div class="line-nums" flex="5"><span>1</span></div>			
+			<textarea id="code-editor" flex="95"></textarea>
 		</div>
 	</div>
-	<div layout="column" flex>
-		<div flex style="background-color: lightgray;">
+	<div class="preview" layout="column" flex="50" layout-padding>
+		<div flex >
 			I'm below on mobile, and to the right on larger devices.
 		</div>
 	</div>
 </div>
-
-
-<!-- <div flex layout="column">
-	<md-content layout="column" class="content-wrapper md-padding" flex layout-column id="content">
-	<div flex>
-		<h2>Home Content</h2>
-
-		<ul>
-			<li>Page Content goes here...</li>
-			<li>and here...</li>
-			<li>and here...</li>
-		</ul>
-	</div>
-</md-content>
-</div> -->

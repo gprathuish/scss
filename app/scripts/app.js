@@ -18,8 +18,7 @@ angular
   'ngSanitize',
   'ngTouch',
   'ui.router',
-  'ngMaterial',
-  'ngMdIcons'
+  'ngMaterial'
   ])
 .config(function ($urlRouterProvider, $stateProvider) {
   $stateProvider.state('panel',{

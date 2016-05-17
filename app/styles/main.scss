@@ -5,12 +5,51 @@ $border-radius-base:        0px !default;
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-
 html, body {
-  height: 100%,
+	height: 100%,
 }
 
-.editor{
-  height: 100%;
-  background-color: lightblue;
+textarea#code-editor{      
+	width:100%;
+	resize: none;
+
+	/* The following three rules make a difference in the script */
+	overflow-y:hidden;
+	line-height: 13px;
+	font-size: 13px;
+	border:0px solid #999;
+	padding:10px;
+	font-family: monospace;
+	margin:0;
+	display:block;
+	outline:none;     
+}
+textarea:focus{
+	border-color:#333;
+}
+.line-nums{
+	font-size:13px;
+	line-height:13px;
+	padding:10px 4px;
+	font-family: monospace;
+	background: #EEE;
+	/*position: absolute;*/
+	width: 20px;
+	left: -28px;
+	bottom: 0;
+	top: 0;
+	text-align:right;
+}
+.preview{
+	background-color: lightgray;
+}
+md-toolbar.md-small{	
+	min-height: 40px;
+}
+// .tools-menu i{
+// 	color: #FFF;
+// }
+
+.tools-menu .md-toolbar-tools{
+	min-heigth: 40px;
 }
