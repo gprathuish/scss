@@ -21,27 +21,36 @@
 	</div>
 </div> -->
 
-<md-toolbar>
-<div class="md-toolbar-tools">
-	<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-	<i class="fa fa-bars fa-lg"></i>
+<div class="header" ng-controller="HeaderCtrl">
+	<md-toolbar>
+	<div class="md-toolbar-tools">
+		<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+		<i class="fa fa-bars fa-lg"></i>
+	</md-button>
+	<h2>
+		<span>Toolbar with Disabled/Enabled Icon Buttons</span>
+	</h2>
+	<span flex></span>
+	<md-button class="md-icon-button" aria-label="Favorite">
+	<md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
 </md-button>
-<h2>
-	<span>Toolbar with Disabled/Enabled Icon Buttons</span>
-</h2>
-<span flex></span>
-<md-button class="md-icon-button" aria-label="Favorite">
-<md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-</md-button>
+
 <md-button class="md-icon-button" aria-label="More">
 <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
 </md-button>
+
+<md-button class="md-raised" aria-label="Learn More" ui-sref="panel" ng-click="showTabDialog($event)">
+Register
+</md-button>
+
 <md-button class="md-raised" aria-label="Learn More" ui-sref="home">
 Home
 </md-button>
+
 <md-button class="md-raised" aria-label="Learn More" ui-sref="panel">
 Panel
 </md-button>
 
 </div>
 </md-toolbar>
+</div>

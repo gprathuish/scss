@@ -2,12 +2,26 @@
 <div class="md-toolbar-tools">	
 	<md-button class="md-icon-button" aria-label="Settings">
 	<i class="fa fa-file"></i>
+	<md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
+	New File
+</md-tooltip>
 </md-button>
 <md-button class="md-icon-button md-accent" aria-label="Favorite">
-<i class="fa fa-save"></i>
+<i class="fa fa-floppy-o"></i>
+<md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
+Save File
+</md-tooltip>
 </md-button>
 <md-button class="md-icon-button" aria-label="More">
-<i class="fa fa-file"></i>
+<i class="fa fa-clipboard"></i>
+<md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
+Copy</md-tooltip>
+</md-button>
+
+<md-button class="md-icon-button" aria-label="More">
+<i class="fa fa-clipboard"></i>
+<md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
+Copy</md-tooltip>
 </md-button>
 <span flex></span>
 <md-button class="md-raised md-primary"><i class="fa fa-download"> </i> CSS</md-button>
