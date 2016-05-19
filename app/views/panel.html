@@ -1,9 +1,18 @@
 <md-toolbar class="md-small md-hue-1 tools-menu">
 <div class="md-toolbar-tools">	
-	<md-button class="md-icon-button" aria-label="Settings">
-	<i class="fa fa-file"></i>
-	<md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
-	New File
+
+<!-- 	<md-input-container>
+	<md-select ng-model="ctrl.userState">
+	<md-option ng-repeat="code_type in ['SASS', 'SCSS']" value="{{code_type}}">
+	{{code_type}}
+</md-option>
+</md-select>
+</md-input-container> -->
+
+<md-button class="md-icon-button" aria-label="Settings">
+<i class="fa fa-file"></i>
+<md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
+New File
 </md-tooltip>
 </md-button>
 <md-button class="md-icon-button md-accent" aria-label="Favorite">
@@ -13,9 +22,9 @@ Save File
 </md-tooltip>
 </md-button>
 <md-button class="md-icon-button" aria-label="More">
-<i class="fa fa-clipboard"></i>
+<i class="fa fa-indent"></i>
 <md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
-Copy</md-tooltip>
+Beautify Code</md-tooltip>
 </md-button>
 
 <md-button class="md-icon-button" aria-label="More">
@@ -23,6 +32,9 @@ Copy</md-tooltip>
 <md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
 Copy</md-tooltip>
 </md-button>
+
+
+
 <span flex></span>
 <md-button class="md-raised md-primary"><i class="fa fa-download"> </i> CSS</md-button>
 <md-button class="md-raised md-primary"><i class="fa fa-cloud-upload"> </i> Make CDN</md-button>

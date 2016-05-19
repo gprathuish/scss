@@ -21,36 +21,119 @@
 	</div>
 </div> -->
 
-<div class="header" ng-controller="HeaderCtrl">
-	<md-toolbar>
+<div class="header" >
+	<md-toolbar class="md-hue-2">
 	<div class="md-toolbar-tools">
-		<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+		<md-button class="md-icon-button" aria-label="Settings" ng-click="toggleRight()">
 		<i class="fa fa-bars fa-lg"></i>
 	</md-button>
 	<h2>
 		<span>Toolbar with Disabled/Enabled Icon Buttons</span>
 	</h2>
 	<span flex></span>
-	<md-button class="md-icon-button" aria-label="Favorite">
-	<md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-</md-button>
 
-<md-button class="md-icon-button" aria-label="More">
-<md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
-</md-button>
-
-<md-button class="md-raised" aria-label="Learn More" ui-sref="panel" ng-click="showTabDialog($event)">
-Register
-</md-button>
-
-<md-button class="md-raised" aria-label="Learn More" ui-sref="home">
-Home
-</md-button>
-
-<md-button class="md-raised" aria-label="Learn More" ui-sref="panel">
-Panel
-</md-button>
-
+	<md-input-container>
+	<md-select ng-model="theme">
+	<label>Theme</label>
+	<md-option  ng-value="color" ng-repeat="color in ['indigo','red','deep-purple','light-blue','teal','orange','green','grey','cyan']" ng-click=changeTheme(color)>
+	{{color | uppercase}}
+</md-option>
+</md-select>
+</md-input-container>
 </div>
 </md-toolbar>
+
+
+
+
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left-menu">
+
+<md-toolbar layout="row">
+<div class="md-toolbar-tools">
+	<h2>
+		<span>Side Panel</span>
+	</h2>
+	<span flex></span>
+	<md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="close()">
+	<md-tooltip>Close Side Panel</md-tooltip>
+	<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-remove fa-lg"></i></md-icon>
+</md-button>
+</div>
+</md-toolbar> 
+
+
+
+<md-toolbar class="md-tall md-hue-2">
+<span flex></span>
+<div layout="column" class="md-toolbar-tools-bottom inset">
+	<md-icon class="md-avatar" md-svg-icon="avatars:svg-1"></md-icon>
+	<span></span>
+	<div>Prathuish G</div>
+	<!-- <div>email@domainname.com</div> -->
+</div>
+</md-toolbar>
+
+
+<md-content>
+
+
+
+<md-list>
+<md-subheader class="md-no-sticky">File</md-subheader>
+<md-list-item>
+<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-file"></i></md-icon>
+<p>File Name 1</p>
+<div class="md-secondary"><i class="fa fa-remove"></i></div>
+</md-list-item>
+
+<md-list-item>
+<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-file "></i></md-icon>
+<p>File Name 2</p>
+<div class="md-secondary"><i class="fa fa-remove"></i></div>
+</md-list-item>
+
+
+<md-divider></md-divider>
+
+<md-subheader class="md-no-sticky">Options</md-subheader>
+
+<md-list-item role="link" md-ink-ripple>
+<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-key"></i></md-icon>
+<p>Change Password</p>
+</md-list-item>
+
+<md-list-item role="link" md-ink-ripple>
+<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-sign-out"></i></md-icon>
+<p>Sign Out</p>
+</md-list-item>
+
+<md-list-item role="link" md-ink-ripple ui-sref="panel">
+<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-sign-out"></i></md-icon>
+<p>Home</p>
+</md-list-item>
+
+<md-list-item role="link" md-ink-ripple ui-sref="home">
+<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-sign-out"></i></md-icon>
+<p>Panel</p>
+</md-list-item>
+
+<md-list-item md-ink-ripple ng-click="signup($event)">
+<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-sign-out"></i></md-icon>
+<p>Sign Up</p>
+</md-list-item>
+
+<md-list-item md-ink-ripple ng-click="signin($event)">
+<md-icon class="md-default-theme" class="material-icons"><i class="fa fa-sign-out"></i></md-icon>
+<p>Sign In</p>
+</md-list-item>
+
+</md-list>
+
+</md-content> 
+
+
+
+</md-sidenav>
+
+
 </div>

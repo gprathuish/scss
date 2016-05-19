@@ -33,4 +33,34 @@ angular
   });
 
   $urlRouterProvider.otherwise('/panel');
+}).config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('indigo')
+  .primaryPalette('indigo')
+  .accentPalette('pink');
+
+  $mdThemingProvider.theme('red')
+  .primaryPalette('red');
+
+  $mdThemingProvider.theme('deep-purple')
+  .primaryPalette('deep-purple');
+
+  $mdThemingProvider.theme('light-blue')
+  .primaryPalette('light-blue');
+
+  $mdThemingProvider.theme('teal')
+  .primaryPalette('teal');
+
+  $mdThemingProvider.theme('orange')
+  .primaryPalette('deep-orange');
+
+  $mdThemingProvider.theme('green')
+  .primaryPalette('green');
+
+  $mdThemingProvider.theme('grey')
+  .primaryPalette('grey');
+
+  $mdThemingProvider.theme('cyan')
+  .primaryPalette('cyan');
+
+  $mdThemingProvider.alwaysWatchTheme(true);
 });

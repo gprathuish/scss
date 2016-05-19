@@ -54,3 +54,23 @@ md-toolbar.md-small{
 	min-heigth: 44px;
 	height: 44px;
 }
+
+.loginBox {
+	max-width:  100%;
+	width: 500px
+}
+
+.stretch input  {
+	width: 100%
+}
+
+md-sidenav {
+	md-icon {
+		fill: #737373;
+		position: relative;
+	}
+	.md-avatar {
+		height: 64px;
+		width: 64px;
+	}
+}
