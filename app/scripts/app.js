@@ -21,6 +21,7 @@ angular
   'ngMaterial'
   ])
 .config(function ($urlRouterProvider, $stateProvider) {
+
   $stateProvider.state('panel',{
     url: '/panel',
     templateUrl: 'views/panel.html',

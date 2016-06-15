@@ -32,11 +32,26 @@
 	</h2>
 	<span flex></span>
 
-	<md-input-container>
-	<md-select ng-model="theme">
-	<label>Theme</label>
-	<md-option  ng-value="color" ng-repeat="color in ['indigo','red','deep-purple','light-blue','teal','orange','green','grey','cyan']" ng-click=changeTheme(color)>
-	{{color | uppercase}}
+	<md-menu>
+	<md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open some menu">
+	<md-icon md-menu-origin md-svg-icon="call:phone"></md-icon>
+</md-button>
+<md-menu-content>
+<md-menu-item>
+<md-button ng-click="doSomething()" aria-label="Do something">
+<md-icon md-menu-align-target md-svg-icon="call:phone"></md-icon>
+Do Something
+</md-button>
+</md-menu-item>
+</md-menu-content>
+</md-menu>
+
+
+<md-input-container>
+<md-select ng-model="theme">
+<label>Theme</label>
+<md-option  ng-value="color" ng-repeat="color in ['indigo','red','deep-purple','light-blue','teal','orange','green','grey','cyan']" ng-click=changeTheme(color)>
+{{color | uppercase}}
 </md-option>
 </md-select>
 </md-input-container>

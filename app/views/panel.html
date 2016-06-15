@@ -1,19 +1,21 @@
-<md-toolbar class="md-small md-hue-1 tools-menu">
-<div class="md-toolbar-tools">	
+<div flex layout-gt-sm="row" layout="column">
+	<div class="code-panel" layout="column" flex-gt-sm="50" flex>
 
-<!-- 	<md-input-container>
-	<md-select ng-model="ctrl.userState">
-	<md-option ng-repeat="code_type in ['SASS', 'SCSS']" value="{{code_type}}">
-	{{code_type}}
-</md-option>
-</md-select>
-</md-input-container> -->
+		<md-toolbar class="md-small md-hue-1 tools-menu">
+		<div class="md-toolbar-tools">
+			<!-- 	<md-input-container>
+			<md-select ng-model="ctrl.userState">
+			<md-option ng-repeat="code_type in ['SASS', 'SCSS']" value="{{code_type}}">
+			{{code_type}}
+			</md-option>
+			</md-select>
+		</md-input-container> -->
 
-<md-button class="md-icon-button" aria-label="Settings">
-<i class="fa fa-file"></i>
-<md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
-New File
-</md-tooltip>
+		<md-button class="md-icon-button" aria-label="Settings">
+		<md-icon md-accent>	 <i class="fa fa-file"></i></md-icon>
+		<md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}">
+		New File
+	</md-tooltip>
 </md-button>
 <md-button class="md-icon-button md-accent" aria-label="Favorite">
 <i class="fa fa-floppy-o"></i>
@@ -33,25 +35,36 @@ Beautify Code</md-tooltip>
 Copy</md-tooltip>
 </md-button>
 
+<span flex></span>
+<md-button class="md-raised md-accent"><i class="fa fa-compress"> </i> Compile</md-button>
 
+</div>
+</md-toolbar>
+<div flex layout="row" style="overflow-y: auto">
+	<div class="line-nums" flex="5"><span>1</span></div>
+	<textarea id="code-editor" flex="95" ng-model="form.code"></textarea>
+</div>
+</div>
+<div class="preview" layout="column" flex-gt-sm="50" flex>
+	<md-toolbar class="md-small md-hue-1 tools-menu">
+	<div class="md-toolbar-tools">
+
+<!-- 	<md-input-container>
+	<md-select ng-model="ctrl.userState">
+	<md-option ng-repeat="code_type in ['SASS', 'SCSS']" value="{{code_type}}">
+	{{code_type}}
+</md-option>
+</md-select>
+</md-input-container> -->
 
 <span flex></span>
 <md-button class="md-raised md-primary"><i class="fa fa-download"> </i> CSS</md-button>
 <md-button class="md-raised md-primary"><i class="fa fa-cloud-upload"> </i> Make CDN</md-button>
 </div>
 </md-toolbar>
-
-
-<div flex layout-gt-sm="row" layout="column">
-	<div class="code-panel" layout="column" flex="50">
-		<div flex layout="row" style="overflow-y: auto">
-			<div class="line-nums" flex="5"><span>1</span></div>			
-			<textarea id="code-editor" flex="95"></textarea>
-		</div>
-	</div>
-	<div class="preview" layout="column" flex="50" layout-padding>
-		<div flex >
-			I'm below on mobile, and to the right on larger devices.
-		</div>
-	</div>
+<div flex  layout-padding>
+	{{form.code}}
+	I'm below on mobile, and to the right on larger devices.
+</div>
+</div>
 </div>

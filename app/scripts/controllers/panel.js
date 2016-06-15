@@ -8,10 +8,12 @@
  * Controller of the scssApp
  */
 angular.module('scssApp')
-  .controller('PanelCtrl', function () {
+  .controller('PanelCtrl', function ($scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.form = {}
   });
